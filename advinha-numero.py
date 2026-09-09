@@ -5,7 +5,14 @@ while True:
 	numero_secreto = random.randint(1, 20)
 	print("Você tem 3 tentativas")
 	for tentativa in range(3):
-		palpite = int(input("Tente adivinhar o número entre 1 e 20: "))
+		try:
+			palpite = int(input("Tente adivinhar o número entre 1 e 20: "))
+		except ValueError:
+			print("Por favor, insira um número válido.")
+			continue
+		if palpite < 1 or palpite > 20:
+			print("Por favor, insira um número entre 1 e 20.")
+			continue
 		if palpite == numero_secreto:
 			print("Parabéns! Você acertou!")
 			break
