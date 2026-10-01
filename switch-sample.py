@@ -1,10 +1,10 @@
-linguagem = input("Escolha a linguagem (Python, Java, C++): ")
+linguagem = input("Escolha a linguagem (Python, Java, C++): ").lower()
 match linguagem:
-	case "Python":
+	case "python":
 		print("Você escolheu Python!")
-	case "Java":
+	case "java":
 		print("Você escolheu Java!")
-	case "C++":
+	case "c++":
 		print("Você escolheu C++!")
 	case _:
 		print("Linguagem não reconhecida.")
